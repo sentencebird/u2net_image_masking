@@ -1,0 +1,7 @@
+streamlit==0.76.0
+selenium
+torch
+torchvision
+opencv-python
+scikit-image
+Pillow
