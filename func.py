@@ -67,7 +67,7 @@ def driver_with_scroll(url):
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')     
-    driver = webdriver.Chrome('chromedriver', chrome_options=options)
+    driver = webdriver.Chrome('./chromedriver', chrome_options=options)
     driver.get(url)
 
     height = driver.execute_script("return document.body.scrollHeight")
@@ -98,7 +98,7 @@ def main(q, min_width, max_n_img=100):
 
     model_name='u2net'#u2netp
     dt_now = datetime.datetime.now().isoformat()
-    model_dir = f'/content/{model_name}.pth'
+    model_dir = f'./{model_name}.pth'
 
     img_name_list = img_url_list
 
