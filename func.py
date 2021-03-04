@@ -65,9 +65,8 @@ def masked_output(image_name,pred):
 def driver_with_scroll(url):
     options = Options()
     options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')     
-    driver = webdriver.Chrome('./chromedriver', chrome_options=options)
+    driver = webdriver.Chrome('chromedriver', chrome_options=options)
     driver.get(url)
 
     height = driver.execute_script("return document.body.scrollHeight")
